@@ -48,10 +48,9 @@ function draw() {
 };
 
 canvas.addEventListener('click', (e) => {
-    console.log(ctx.getImageData(e.offsetX, e.offsetY, 1, 1))
     colors = [];
     for (let i = 0; i < 4; i++) {
-        color = ctx.getImageData(e.offsetX, e.offsetY, 1, 1).data[i];
+        let color = ctx.getImageData(e.offsetX, e.offsetY, 1, 1).data[i];
         colors.push(color);
     };
     let endElement = colors.pop();
